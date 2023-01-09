@@ -1,0 +1,114 @@
+.become-our-part-box{
+    width: 100%;
+    margin-top: 20px;
+    height: 500px;
+    background-color: #4f612f;
+    color: white;
+    font-size: 3rem; 
+    line-height: 60px;
+    text-align: center;
+}
+/* .become-our-part-box{
+    height: 200px;
+    position: relative;
+    background-color: #4f612f;
+    color:white;
+}
+.vertically-centered{
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+} */
+/* ----------------------*/
+
+/* .vertically-centered{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+} */
+
+.form-div{
+    margin-top: -80px;
+    background-color: white;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.719);
+}
+
+.application-form{
+    margin-top: 20px;
+    color: #4f612f;
+    background-color: white;
+    text-align: center;
+    min-width: min-content;
+    font-size: 25px;
+    line-height: 30px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 40px;
+    padding-bottom: 70px;
+}
+
+.contact-info{
+    background-color: rgb(85, 84, 84);
+    min-height: 500px;
+}
+
+.form-input{
+    width: 70%;
+    margin-top: 5px;
+    border-style: none;
+    border-bottom-style: solid;
+    padding: 5px;
+    font-size: 17px;
+    text-indent: 20px;
+    border-color: #4f612f21;
+    min-height: max-content;
+}
+
+.form-input-message{
+    width: 70%;
+    margin-top: 5px;
+    border-style: none;
+    border-bottom-style: solid;
+    padding: 5px;
+    font-size: 17px;
+    text-indent: 20px;
+    border-color: #4f612f21;
+    height: 150px;
+    text-align: left;
+}
+
+.submit-application-button{
+    width: 80%;
+    border-radius: 15px;
+    color: white;
+    background-color: #58702f;
+    font-size: 18px;
+    height: 45px;
+    border-style: none;
+    margin-top: 30px;
+    word-wrap: break-word;
+}
+
+.contact-heading{
+    text-align: center;
+    padding-top: 55px;
+    color:#40ca00;
+    font-size: 25px;
+}
+.contact-label{
+    text-align: center;
+    margin-top: 70px;
+    font-size: 15px;
+    color: rgb(236, 236, 236);
+    font-weight: 100;
+
+}
+.contact-data{
+    text-align: center;
+    font-size: 24px;
+    color: rgb(221, 223, 221);
+    margin-top: 20px;
+}

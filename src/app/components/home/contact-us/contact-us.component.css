@@ -1,0 +1,70 @@
+.green-box{
+    background-color: #4f612f;
+    height: 500px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+    padding-top: 150px;
+    margin-top: 20px;
+}
+
+.btn-contact{
+    margin-top: 20px;
+    background-color: #4f612f;
+    color: white;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.btn-contact:hover{
+    background-color: #6e8f36;
+}
+
+.form-div{
+    margin-top: -80px;
+    background-color: white;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.719);
+}
+
+
+.application-form{
+    margin-top: 20px;
+    color: #4f612f;
+    background-color: white;
+    text-align: center;
+    min-width: min-content;
+    font-size: 25px;
+    line-height: 30px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 40px;
+    padding-bottom: 70px;
+}
+
+.form-input{
+    width: 80%;
+    margin-top: 5px;
+    border-style: none;
+    border-bottom-style: solid;
+    padding: 5px;
+    font-size: 17px;
+    text-indent: 20px;
+    border-color: #4f612f21;
+    min-height: max-content;
+}
+
+.submit-application-button{
+    width: 80%;
+    border-radius: 15px;
+    color: white;
+    background-color: #58702f;
+    font-size: 18px;
+    height: 45px;
+    border-style: none;
+    margin-top: 30px;
+    word-wrap: break-word;
+}

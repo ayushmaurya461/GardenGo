@@ -1,0 +1,164 @@
+<div class="row text-center justify-content-center">
+  <p>Welcome to GardenGO, your lawn maintenance company in Haryana, India.</p>
+</div>
+<hr style="margin-top: -10px;">
+<nav class="navbar navbar-expand-lg  mb-3 sticky-top">
+	<div class="container-fluid">
+		<a 
+      class="navbar-brand" 
+      routerLink="/">
+      GardenGO</a>
+
+		<button 
+      class="navbar-toggler" 
+      type="button" 
+      (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+
+		<div
+
+      [ngbCollapse]="isMenuCollapsed" 
+      class="collapse flex-row-reverse navbar-collapse">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a 
+            class="nav-link" 
+            routerLink="/" 
+            (click)="isMenuCollapsed = true"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}"
+            >Home</a>
+				</li>
+				<li class="nav-item">
+					<a 
+            class="nav-link" 
+            routerLink="/services" 
+            (click)="isMenuCollapsed = true"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}"
+            >Services</a>
+				</li>
+				<li class="nav-item">
+					<a 
+            class="nav-link" 
+            routerLink="/careers" 
+            (click)="isMenuCollapsed = true"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}"
+            >Careers</a>
+				</li>
+        <li class="nav-item">
+					<a 
+            class="nav-link margin-for-button" 
+            routerLink="/free-consultation" 
+            (click)="isMenuCollapsed = true"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}"
+            >FREE Consultation</a>
+				</li>
+        <li *ngIf="!isAuthenticated">
+          <a 
+            class="nav-link nav-member" 
+            routerLink="/login" 
+            (click)="isMenuCollapsed = true"
+            >Login & Signup</a>
+        </li>
+        <li *ngIf="isAuthenticated">
+          <a class="nav-link nav-member" >Logout</a>
+        </li>
+			</ul>
+      <!--
+      <form class="d-flex" *ngIf="!alreadyMember">
+        <button 
+        routerLink="/become-a-member"
+        class="btn become-a-member" 
+        type="button"
+        >Become a Member</button>
+      </form>
+      <form class="d-flex" *ngIf="alreadyMember">
+        <button 
+        routerLink="/profile"
+        class="btn become-a-member" 
+        type="button"
+        >Hi, {{ memberName }}</button>
+      </form> -->
+		</div>
+	</div>
+</nav>
+
+
+
+
+
+
+
+
+<!-- </div>
+<hr style="margin-top: -10px;">
+<nav class="navbar navbar-expand-sm navbar-light sticky-top">
+    <div class="container-fluid">
+
+      <div>
+        <p class="logo">
+          <a 
+          routerLink="/"
+          class="navbar-brand">GardenGO</a>
+        </p>
+      </div>
+      <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse flex-row-reverse navbar-collapse">
+
+        <form class="d-flex" *ngIf="!alreadyMember">
+          <button 
+          routerLink="/become-a-member"
+          class="btn become-a-member" 
+          type="button"
+          >Become a Member</button>
+        </form>
+        <form class="d-flex" *ngIf="alreadyMember">
+          <button 
+          routerLink="/profile"
+          class="btn become-a-member" 
+          type="button"
+          >Hi, {{ memberName }}</button>
+        </form>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}"
+            >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+            routerLink="/services"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}"
+            >Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+            routerLink=""
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}"
+            >FREE Consultation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+            routerLink="/careers"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact : true}"
+            >Career</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->

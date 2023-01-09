@@ -1,0 +1,19 @@
+.btn-danger{
+    width: fit-content;
+    margin-top: 100px;
+}
+
+.container-fluid{
+    margin-top: 50px;
+}
+
+.ptofile-heading{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    color: #4f612f;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}

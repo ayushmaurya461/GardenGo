@@ -1,0 +1,50 @@
+.image-div{
+    margin: auto;
+}
+
+.hide-md{
+    display: none;
+}   
+
+img{
+    width: 100%;
+}
+.show-md{
+    display: block;
+}
+
+.text-div{
+    text-align: center;
+    align-content: center;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: auto;
+    /* padding-top: 100px; */
+}
+
+.container-div{
+    min-height: 450px;
+}
+
+h1{
+    color: #4f612f;
+}
+
+@media screen and (max-width : 992px){
+    .hide-md{
+        display: block;
+    }
+
+    .show-md{
+        display: none;
+    }
+
+    .text-div{
+        padding: 10px;
+        padding-top: 10px;
+    }
+
+    ul{
+        margin-left: -15px;
+    }
+}

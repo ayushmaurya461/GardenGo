@@ -1,0 +1,75 @@
+<div class="spinner" *ngIf="isLoading">
+    <app-loading-spinner></app-loading-spinner>
+</div>
+<div 
+    *ngIf="error"
+    class="alert alert-danger">
+    <p>{{ error }}</p>
+</div>
+<div *ngIf="!isLoading">
+    <div 
+    *ngIf="loginMode"
+    class="row d-flex justify-content-center">
+        <div class="col-10 col-xs-10 col-sm-10 col-md-8 col-lg-5 d-flex justify-content-center form-div">
+            <form 
+            #loginForm="ngForm"
+            (ngSubmit)="login(loginForm)">
+                <input 
+                    type="email" 
+                    class="form-control form-input"
+                    name="email"
+                    placeholder="Email"
+                    required
+                    email
+                    ngModel>
+                <input 
+                    type="password" 
+                    class="form-control form-input"
+                    name="password"
+                    placeholder="Password"
+                    minlength="6"
+                    required
+                    ngModel>
+                <button 
+                    [disabled]="!loginForm.valid"
+                    class="btn submit-application-button" 
+                    >Login</button>
+            </form>
+        </div>
+    </div>
+    <div 
+    *ngIf="!loginMode"
+    class="row d-flex justify-content-center">
+        <div class="col-10 col-xs-10 col-sm-10 col-md-8 col-lg-5 d-flex justify-content-center form-div">
+            <form 
+            #signupForm="ngForm"
+            (ngSubmit)="signup(signupForm)" >
+                <input 
+                    type="email" 
+                    class="form-control form-input"
+                    name="email"
+                    placeholder="Email"
+                    required
+                    email
+                    ngModel>
+                <input 
+                    type="password" 
+                    class="form-control form-input"
+                    name="password"
+                    placeholder="Password"
+                    minlength="6"
+                    required
+                    ngModel>
+                <button
+                    [disabled]="!signupForm.valid" 
+                    class="btn submit-application-button"
+                    >Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <button 
+        class="btn btn-switch"
+        (click)="switchMode()"> {{ loginMode? 'Switch to Sign Up Mode' : 'Switch to Login Mode'}}</button>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<ngb-carousel
+	class="carousel"
+	#carousel
+	[interval]="3000"
+	[pauseOnHover]="pauseOnHover"
+	[pauseOnFocus]="pauseOnFocus"
+	(slide)="onSlide($event)"
+>
+	<ng-template 
+		ngbSlide 
+		*ngFor="let img of images; index as i">
+		<div class="carousel-caption">
+			<h3>My slide {{i + 1}} title</h3>
+		</div>
+		<a 
+			href="" 
+			target="_blank" 
+			rel="nofollow noopener noreferrer">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-xs-12 col-md-12 col-lg-8 picsum-img-wrapper">
+					<img 
+					[src]="img"
+					alt="My image {{i + 1}} description" />
+				</div>
+				<div class="col-12 col-sm-12 col-xs-12 col-md-12 col-lg-4 carousel-text-div">
+					<div class="d-flex justify-content-center">
+						<h2>Info About Carousel</h2>
+					</div>
+				</div>
+			</div>
+		</a>
+	</ng-template>
+</ngb-carousel>
+

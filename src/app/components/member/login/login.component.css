@@ -1,0 +1,39 @@
+.form-div{
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.425);
+}
+
+.form-input{
+    border-style: none;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.527);
+}
+
+.submit-application-button{
+    margin-top: 35px;
+    color: white;
+    background-color: #4f612f;
+    width: 100%;
+}
+
+.submit-application-button:disabled{
+background-color: grey;
+}
+
+.btn-switch{
+    background-color: rgb(123, 95, 160);
+    color: white;
+    width: fit-content;
+    margin-top: 100px;
+}
+
+.spinner{
+    text-align: center;
+    z-index: 100;
+    margin-top: 200px;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+}

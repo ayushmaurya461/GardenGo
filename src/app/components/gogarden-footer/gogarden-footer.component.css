@@ -1,0 +1,18 @@
+a:link{
+    text-decoration: none;
+    color: black;
+}
+
+a{
+    color: rgb(0, 99, 0);
+}
+
+img.icon {
+    height: 20px;
+    width: 20px;
+}
+
+footer{
+    margin-top: 180px;
+    padding: 20px;
+}

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="profile-heading col-xs-12 col-sm-12 col-md-4 col-lg-3">
+            <h1>Profile Details</h1>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4">
+
+        </div>
+        <div class="col-xs-12 col-12 col-sm-12 col-md-8 col-lg-4">
+            <h2>{{ member[0].name }}</h2>
+            <p>Email : {{member[0].email}}</p>
+            <p>Telephone : {{member[0].telephone}}</p>
+            <p>Gender : {{member[0].gender}}</p>
+        </div> 
+    </div>
+    <div class="d-flex justify-content-center">
+        <button 
+            (click)="logout()"
+            class="btn btn-danger">Logout</button>  
+    </div>
+</div>

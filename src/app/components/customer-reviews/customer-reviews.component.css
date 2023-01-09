@@ -1,0 +1,47 @@
+img{
+    height: 60px;
+    width: 60px;
+}
+
+.rev{
+    margin-top: -20px;
+}
+
+.list-group-item{
+    margin-top: 10px;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.customer-review-button{
+    margin-top: 50px;
+    height: 60px;
+    width: 30%;
+    background-color: #4f612f;
+    color: white;
+    font-size: 20px;
+}
+
+.revCard{
+    background-color:white;
+}
+
+.happy-customer{
+    color: #4f612f;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: -15px;
+    font-size: 50px;
+}
+
+.list-group{
+    margin-top: 20px;
+}
+
+
+.revState {
+    border-style:initial;
+    border-left: inset 1px;
+    /* border-left: 5px; */
+}
+/* ---------------------------------  */

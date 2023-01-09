@@ -1,0 +1,132 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8 d-flex justify-content-center review-text">
+            <h2>Share your review below</h2>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-11 col-xs-11 col-md-6 col-lg-6">
+            <form 
+                (ngSubmit)="onSubmit()"
+                #f="ngForm">
+                <div class="form-group">
+                    <label 
+                        for="fullName" 
+                        class="form-label"
+                        >Enter your Full Name</label>
+                    <input 
+                        type="text" 
+                        name="fullName" 
+                        class="form-control"
+                        ngModel
+                        required>
+                </div>
+                <div class="form-group">
+                    <label 
+                        for="email" 
+                        class="form-label"
+                        >Enter your E-mail</label>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        class="form-control"
+                        ngModel
+                        required
+                        email>
+                    <div 
+                        id="email-help" 
+                        class="form-text"
+                        >We'll never share your email with anyone.</div>
+                </div>
+                <div class="form-group">
+                    <label 
+                        for="review" 
+                        class="form-label"
+                        >Enter your review</label>
+                    <input 
+                        type="text" 
+                        name="review" 
+                        class="form-control" 
+                        [ngStyle]="{'height':'100px'}"
+                        ngModel
+                        required>
+                </div>
+                <div class="form-group">
+                    <label 
+                        for="gender" 
+                        class="form-label"
+                        >Select your gender</label>
+                    <select 
+                        name="gender" 
+                        id="gender" 
+                        class="form-control"
+                        [ngModel]="defaultGender"
+                        required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label 
+                        for="address" 
+                        class="form-label"
+                        >Enter your Address</label>
+                    <input 
+                        name="address" 
+                        type="text" 
+                        class="form-control"
+                        ngModel
+                        required><br>
+                    <select 
+                        id="state" 
+                        name="state" 
+                        class="form-control"
+                        [ngModel]="defaultState"
+                        required>
+                        <option value="chandigarh">Chandigarh</option>
+                        <option value="haryana">Haryana</option>
+                        <option value="punjab">Punjab</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="uttrakhand">Uttrakhand</option>
+                        <option value="himachal">Himachal Pradesh</option>
+                    </select>
+                    <div 
+                        id="email-help" 
+                        class="form-text"
+                        >Select your state.</div>
+                </div>
+                <div class="form-group">
+                    <label 
+                        for="rating" 
+                        class="form-label"
+                        >Choose your rating</label>
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10 col-xs-12 col-sm-12">
+                            <input 
+                            type="range" 
+                            name="rating" 
+                            id="rating" 
+                            class="form-range" 
+                            min="1" 
+                            max="5" 
+                            step="0.1"
+                            [(ngModel)]="ratingValue"
+                            required>
+                         </div>
+                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12 d-flex justify-content-center">
+                            <span id="ratingValue">{{ ratingValue }}</span>
+                         </div>
+                    </div>   
+                </div>
+                <br>
+                <button 
+                    class="btn btn-success form-control"
+                    [disabled]="!f.valid">
+                    Submit your review
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
