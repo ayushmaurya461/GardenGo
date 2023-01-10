@@ -55,15 +55,22 @@
             [routerLinkActiveOptions]="{exact : true}"
             >FREE Consultation</a>
 				</li>
-        <li *ngIf="!isAuthenticated">
+        <!-- <li *ngIf="!isAuthenticated">
           <a 
             class="nav-link nav-member" 
             routerLink="/login" 
             (click)="isMenuCollapsed = true"
             >Login & Signup</a>
+        </li> -->
+        <li *ngIf="!isAuthenticated">
+          <button 
+            class="btn btn-login" 
+            routerLink="/login" 
+            (click)="isMenuCollapsed = true"
+            >Login & Signup</button>
         </li>
         <li *ngIf="isAuthenticated">
-          <a class="nav-link nav-member" >Logout</a>
+          <a class="btn btn-login" (click)="onLogout()" >Logout</a>
         </li>
 			</ul>
       <!--

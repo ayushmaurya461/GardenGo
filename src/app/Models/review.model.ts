@@ -6,5 +6,6 @@ export interface Review {
     review?: string;
     image?:string;
     rating?: number;
-    email:string;
+    email: string;
+    id?: string;
 }

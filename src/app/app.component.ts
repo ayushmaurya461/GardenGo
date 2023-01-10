@@ -1,4 +1,6 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+
+import { LoginService } from './components/member/login/login.service';
 import { MemberServiceService } from './Services/member-service.service';
 
 @Component({
@@ -6,16 +8,17 @@ import { MemberServiceService } from './Services/member-service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'GoGarden';
   
   loggedIn! : boolean;
   memberJoined!: boolean;
-  constructor(private memberService : MemberServiceService){}
+  constructor(
+    private memberService: MemberServiceService,
+    private loginService: LoginService          
+    ){}
 
-
-  //Setting Logging in
-  hasMemberJoined(event : any){    
-    
+  ngOnInit(){
+    this.loginService.autoLogin()
   }
 }

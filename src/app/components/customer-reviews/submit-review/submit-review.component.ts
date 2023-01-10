@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { CustomerReviewsService } from 'src/app/Services/customer-reviews.service';
+import { CustomerReviewsService } from 'src/app/components/customer-reviews/customer-reviews.service';
 
 
 @Component({
@@ -19,14 +19,23 @@ export class SubmitReviewComponent implements OnInit {
 
   constructor(private customerReviews : CustomerReviewsService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
   onSubmit(){
     console.log(this.reviewForm.value);
-    
+    this.customerReviews.postReview(
+      this.reviewForm.value.fullName,
+      this.reviewForm.value.email,
+      this.reviewForm.value.gender,
+      this.reviewForm.value.rating,
+      this.reviewForm.value.address,
+      this.reviewForm.value.state,
+      this.reviewForm.value.review
+      );
     
     this.reviewForm.reset();
 
   }
 }
+ 

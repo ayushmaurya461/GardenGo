@@ -14,8 +14,6 @@ export class GogardenNavComponent implements OnInit, OnChanges {
   private userSub! : Subscription;
   isAuthenticated = false;
   
-  @Input() memberHasJoined : boolean = false;
-  @Input() userHasLoggedin : boolean = false;
   alreadyMember = false;
   memberName = '';
   isMenuCollapsed = true;
@@ -27,12 +25,15 @@ export class GogardenNavComponent implements OnInit, OnChanges {
     this.userSub = this.loginService.user.subscribe( user => {
       this.isAuthenticated = !user? false : true;
     });
-    console.log(this.memberHasJoined);
     
   }
 
   ngOnChanges(){  
 
+  }
+
+  onLogout(){
+    this.loginService.logout();
   }
 
 }

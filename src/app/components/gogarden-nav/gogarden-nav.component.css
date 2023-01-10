@@ -7,8 +7,8 @@
 
 .navbar{
     background-color: #4f612f;
-    height: max-content;
     min-height: 70px;
+    height: max-content;
     width: 100%;
     margin-top: -10px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
@@ -53,11 +53,28 @@ a:active{
     margin-top: -3.5px;
 }
 
+.btn-login{
+    color: rgb(211, 209, 209);
+    background-color: #4f612f;
+    font-size: 18px;
+    margin-top: -5px;
+    border: 1px solid rgb(211, 209, 209);
+    border-radius: 10px;
+}
+
+.btn-login:hover{
+    background-color: rgb(211, 209, 209);
+    color: #4f612f;
+}
+
 .navbar-nav{
     position: relative;
     margin-top: 15px;
 }
 
+a.nav-link:hover{
+    color: rgb(235, 209, 175);
+}
 a.nav-link.active{
     color: #ffffff;
     text-shadow: 

@@ -8,27 +8,6 @@
     line-height: 60px;
     text-align: center;
 }
-/* .become-our-part-box{
-    height: 200px;
-    position: relative;
-    background-color: #4f612f;
-    color:white;
-}
-.vertically-centered{
-    margin: 0;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-} */
-/* ----------------------*/
-
-/* .vertically-centered{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-} */
 
 .form-div{
     margin-top: -80px;
@@ -81,12 +60,12 @@
 }
 
 .submit-application-button{
-    width: 80%;
+    width: 60%;
     border-radius: 15px;
     color: white;
     background-color: #58702f;
     font-size: 18px;
-    height: 45px;
+    height: fit-content;
     border-style: none;
     margin-top: 30px;
     word-wrap: break-word;
@@ -96,7 +75,8 @@
     text-align: center;
     padding-top: 55px;
     color:#40ca00;
-    font-size: 25px;
+    font-size: 28px;
+    font-weight:200;
 }
 .contact-label{
     text-align: center;
