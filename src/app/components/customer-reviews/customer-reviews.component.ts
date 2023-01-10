@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerReviewsService } from 'src/app/Services/customer-reviews.service';
+import { Subscription } from 'rxjs';
+import { CustomerReviewsService } from 'src/app/components/customer-reviews/customer-reviews.service';
 import { Review } from 'src/app/Models/review.model';
+import { LoginService } from '../member/login/login.service';
 
 @Component({
   selector: 'app-customer-reviews',
@@ -9,12 +11,33 @@ import { Review } from 'src/app/Models/review.model';
 })
 export class CustomerReviewsComponent implements OnInit {
   reviews : Review[] = [] ;
-  constructor( private customerReview: CustomerReviewsService) {
+  loadingData = false;
+  private userSub! : Subscription;
+  canSubmitReview = false;
+
+
+  constructor( 
+      private customerReview: CustomerReviewsService,
+      private loginService : LoginService) {
 
    }
 
-  ngOnInit(): void {
-    this.reviews = this.customerReview.reviews;
+  ngOnInit(){
+    this.userSub = this.loginService.user.subscribe(
+      user => {
+        this.canSubmitReview = !user ? false : true;
+      }
+    );
+    this.loadingData = true; 
+    this.customerReview.fetchReviews().subscribe( 
+      (reviewData : Review[]) =>{
+        this.loadingData = false;
+        this.reviews = reviewData;
+    },
+      err => {
+        this.loadingData = false;
+        console.log(err);
+    });
   }
 
 }

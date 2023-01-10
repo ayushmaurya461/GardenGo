@@ -17,6 +17,7 @@ img{
     margin-top: 50px;
     height: 60px;
     width: 30%;
+    min-width: fit-content;
     background-color: #4f612f;
     color: white;
     font-size: 20px;
@@ -45,3 +46,7 @@ img{
     /* border-left: 5px; */
 }
 /* ---------------------------------  */
+
+.spinner{
+    margin-left: 47%;
+}
