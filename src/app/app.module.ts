@@ -7,7 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgbCollapseModule, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgFor } from '@angular/common';
 
-import { AlertBoxComponent } from './components/member/alert-box/alert-box.component';
+import { AlertBoxComponent } from './Shared/alert-box/alert-box.component';
 import { AppComponent } from './app.component';
 import { CareersComponent } from './components/careers/careers.component';
 import { CarouselComponent } from './components/home/carousel/carousel.component';

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-alert-box',
@@ -7,6 +7,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class AlertBoxComponent implements OnInit {
   @Output() backdropClosed : EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Input() message: string;
+  @Input() showShortly: boolean;
 
   constructor() { }
 

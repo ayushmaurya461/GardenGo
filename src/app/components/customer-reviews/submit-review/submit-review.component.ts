@@ -13,6 +13,10 @@ export class SubmitReviewComponent implements OnInit {
   @ViewChild('f')
   reviewForm!: NgForm;
 
+  message='review';
+  showAlertBox = false;
+  show=false;
+
   defaultState ='';
   defaultGender='';
   ratingValue: number = 2;
@@ -20,6 +24,10 @@ export class SubmitReviewComponent implements OnInit {
   constructor(private customerReviews : CustomerReviewsService) { }
 
   ngOnInit(){
+  }
+
+  toggleBackdrop(){
+    this.showAlertBox = false;
   }
 
   onSubmit(){
@@ -35,6 +43,7 @@ export class SubmitReviewComponent implements OnInit {
       );
     
     this.reviewForm.reset();
+    this.showAlertBox = true;
 
   }
 }

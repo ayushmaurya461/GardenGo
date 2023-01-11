@@ -61,14 +61,18 @@
 
 .submit-application-button{
     width: 60%;
+    min-height: fit-content;
     border-radius: 15px;
     color: white;
     background-color: #58702f;
     font-size: 18px;
-    height: fit-content;
     border-style: none;
     margin-top: 30px;
     word-wrap: break-word;
+}
+
+.submit-application-button:disabled{
+    background-color: grey;
 }
 
 .contact-heading{

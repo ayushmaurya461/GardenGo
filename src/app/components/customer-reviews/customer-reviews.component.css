@@ -39,6 +39,10 @@ img{
     margin-top: 20px;
 }
 
+.review-image{
+    height: 50px;
+    width: 50px;
+}
 
 .revState {
     border-style:initial;
@@ -49,4 +53,10 @@ img{
 
 .spinner{
     margin-left: 47%;
+}
+
+@media screen and (max-width : 576px){
+    .review-image{
+        margin-bottom: 50px;
+    }
 }

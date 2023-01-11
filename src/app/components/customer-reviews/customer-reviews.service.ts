@@ -55,7 +55,6 @@ export class CustomerReviewsService {
         'https://gardengo-461-default-rtdb.firebaseio.com/reviews.json',
       ).pipe(
           map((response => {
-            console.log(response);
             const reviewsData : Review[] = [];
             for(const key in response){
               if(response.hasOwnProperty(key)){

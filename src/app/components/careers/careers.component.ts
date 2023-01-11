@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-careers',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./careers.component.css']
 })
 export class CareersComponent implements OnInit {
-
+  showAlertBox = false;
+  show= true;
+  message = "application";
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
+
+   toggleBackdrop(){
+    this.showAlertBox = false;
+   } 
+
+   formSubmit(form : NgForm){
+    console.log(form.value);
+    form.reset();
+    this.showAlertBox = true;
+   }
 
 }
