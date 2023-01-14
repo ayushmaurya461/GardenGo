@@ -16,19 +16,20 @@
                 *ngFor="let rev of reviews">
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-                            <div class="d-flex justify-content-center">
+                            <div class="review-image">
                                 <img [src]="rev.image" alt="No Image provided">
                             </div>
                         </div>
                         <div class="col-xs-8 col-sm-5 col-md-6 col-lg-7">
-                            <h3>{{ rev.name }}</h3>
+                            <h3><b>{{ rev.name }}</b></h3>
                             <p>{{ rev.review }}</p>
                         </div>
                         <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 revState"  >
-                            <p> {{ rev.address }} </p>
+                            <p> {{ rev.address }}, </p>
                             <p> {{ rev.state }} </p>
                         </div>
                     </div>
+                    <hr style="color: #b6c796;">
                 </li>
             </ul>
         </div>
@@ -41,7 +42,4 @@
         class="btn customer-review-button"
         routerLink="/submit-review">Submit a review</button>
     </div>
-</div>
-<div class="row d-flex justify-content-center">
-    <p *ngIf="!canSubmitReview">Please login or signup for submitting a review.</p>
 </div>

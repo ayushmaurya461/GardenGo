@@ -1,10 +1,17 @@
+<app-alert-box 
+    (backdropClosed)="toggleBackdrop()"
+    [message]="message"
+    [showShortly]="show"
+    *ngIf="showAlertbox"
+></app-alert-box>
+
 <div class='container-fluid'>
     <div class="green-box">
         <p style="font-size: 3rem;">Contact Us</p>
         <p style="margin-top: 40px;">When you’re ready to choose the best landscaping company in
             Haryana, India.</p>
         <p> Give us a call to chat about your project.</p>
-        <button class="btn btn-contact">Contact</button><br>
+        <button class="btn btn-contact"><a style="text-decoration: none; color: white;" href="tel:8168005875">Contact</a></button><br>
         <button
             routerLink="/customer-reviews"
             class="btn btn-contact">See What Our Customer Says </button>
@@ -13,32 +20,48 @@
         <div class="col-12 col-sm-12 col-xs-12 col-md-8 col-lg-5 d-flex justify-content-center form-div">
             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 application-form">
                 <p style="color:#4f612f;">Write us and book an FREE consultation today.</p>
-                <form>
+                <form #form="ngForm" (ngSubmit)="submitForm(form)">
                     <div class="form-group">
                         <input 
+                            name="name"
                             type="text" 
                             placeholder="Name" 
-                            class="form-input">
+                            class="form-input"
+                            required
+                            ngModel>
                         <input 
+                            name="email"
                             type="text" 
                             placeholder="Email" 
-                            class="form-input">
+                            class="form-input"
+                            required
+                            ngModel>
                         <input 
+                            name="phone"
                             type="tel" 
                             placeholder="Telephone" 
-                            class="form-input">
+                            class="form-input"
+                            required
+                            ngModel>
                         <input 
+                            name="budget"
                             type="text" 
                             placeholder="Your Budget?" 
-                            class="form-input">
+                            class="form-input"
+                            required
+                            ngModel>
                         <textarea 
-                            placeholder="Your Message Here..."
+                            name="message"
+                            placeholder="Your Message..."
                             rows="4"
-                            class="form-input"></textarea>
+                            class="form-input"
+                            required
+                            ngModel></textarea>
                         <button 
+                            [disabled]="!form.valid"
                             type="submit"
                             class="submit-application-button"
-                            >Submit Your Application</button>
+                            >Submit</button>
                     </div>
                 </form>
             </div>

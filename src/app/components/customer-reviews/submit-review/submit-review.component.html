@@ -1,3 +1,10 @@
+<app-alert-box 
+    (backdropClosed)="toggleBackdrop()"
+    [message]="message"
+    [showShortly]="show"
+    *ngIf="showAlertBox"
+></app-alert-box>
+
 <div class="container">
     <div class="row d-flex justify-content-center">
         <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8 d-flex justify-content-center review-text">
