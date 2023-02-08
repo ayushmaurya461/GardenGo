@@ -1,27 +1,41 @@
 # GoGarden
+## Table of Contents
+* Info
+* Technologies used
+* Setup
+* Code scaffolding
+* Build
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+### Info
 
-## Development server
+GardenGo provides the landscape services like lawn and Garden maintenance, from planting young flowers to nourishing mature trees. GardenGo provides the complete solution for all the needs of your garden or lawn. 
+* The user can get be a part of us by signing in using an email address and a password.
+* User can login and logout using the Login/Logout button provided in Navbar. One online session will be active for one hour.
+* User can book a free consultation by filling the form provided on the landing page as well as navigating through `Free Consulation` on Navbar. 
+* For career options user can fill the form provided on the career page. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Technilogies Used
 
-## Code scaffolding
+This project is created with:
+* Angular 14.2
+* CSS
+* Bootstarp
+* Firebase
+
+### Setup
+
+To run this project in local, first  clone the project and then:
+```
+$ cd ./GardeGo
+$ npm install
+$ ng serve
+```
+
+### Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
