@@ -3,8 +3,6 @@ import { Subscription } from 'rxjs';
 import { MemberServiceService } from 'src/app/Services/member-service.service';
 import { LoginService } from '../member/login/login.service';
 
-
-
 @Component({
   selector: 'app-gogarden-nav',
   templateUrl: './gogarden-nav.component.html',
